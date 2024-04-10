@@ -12,11 +12,6 @@ const AnchorAd = () => {
           "/22725519965/OJI_ANCHOR",googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
         );
 
-        // Anchor slots return null if the page or device does not support anchors.
-        if (anchorSlot) {
-          anchorSlot.setTargeting("test", "anchor").addService(googletag.pubads());
-        }
-
         // Enable SRA and services.
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();

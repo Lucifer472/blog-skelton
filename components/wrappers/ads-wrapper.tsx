@@ -32,13 +32,12 @@ export const AdsWrapper = ({
         if (e.slot) {
           if (e.isEmpty) {
             setShow(false);
-          } else {
-            googletag.display(id);
           }
         } else {
           setShow(false);
         }
       });
+      googletag.display(id);
     });
     return () => {
       if (googletag && sl !== null) {
