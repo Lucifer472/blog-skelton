@@ -17,6 +17,7 @@ export const createBlog = async (v: z.infer<typeof BlogSchema>) => {
 
   const session = await auth();
   if (!session || !session.user || !session.user.id) {
+    console.log(session);
     return { error: "Please Login Again!" };
   }
 
