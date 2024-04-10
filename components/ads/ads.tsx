@@ -54,11 +54,7 @@ export const Ad4 = () => {
 export const Ad5 = () => {
   return (
     <ClientWrapper>
-      <AdsWrapper
-        id="div-gpt-ad-1704872584176-0"
-        label="/22725519965/105"
-        size={[336, 280]}
-      />
+      <AdsWrapper id="ssss" label="/22725519965/ssss" size={[336, 280]} />
     </ClientWrapper>
   );
 };
@@ -66,11 +62,7 @@ export const Ad5 = () => {
 export const Ad6 = () => {
   return (
     <ClientWrapper>
-      <AdsWrapper
-        id="div-gpt-ad-1704872584176-0"
-        label="/22725519965/105"
-        size={[336, 280]}
-      />
+      <AdsWrapper id="asdasd" label="/22725519965/1ss05" size={[336, 280]} />
     </ClientWrapper>
   );
 };
