@@ -11,6 +11,9 @@ const AnchorAd = () => {
         anchorSlot = googletag.defineOutOfPageSlot(
           "/22725519965/OJI_ANCHOR",googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
         );
+        if (anchorSlot) {
+          anchorSlot.setTargeting("test", "anchor").addService(googletag.pubads());
+        }
 
         // Enable SRA and services.
         googletag.pubads().enableSingleRequest();
