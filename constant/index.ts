@@ -31,8 +31,12 @@ export const navLinks = [
 
 export const footerLinks = [
   {
-    label: "Homepage",
-    link: "/",
+    label: "Contact Us",
+    link: "/contact",
+  },
+  {
+    label: "Copyright",
+    link: "/copyright",
   },
   {
     label: "Terms & Condition",
@@ -41,6 +45,10 @@ export const footerLinks = [
   {
     label: "Privacy Policy",
     link: "/policy",
+  },
+  {
+    label: "Disclaimer",
+    link: "/disclaimer",
   },
 ];
 

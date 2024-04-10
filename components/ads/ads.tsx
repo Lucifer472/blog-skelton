@@ -7,9 +7,9 @@ export const Ad1 = () => {
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="banner-ad"
-        label="/6355419/Travel/Europe/France/Paris"
-        size={[300, 250]}
+        id="div-gpt-ad-1712749805817-0"
+        label="/22725519965/101"
+        size={[336, 280]}
       />
     </ClientWrapper>
   );
@@ -19,8 +19,8 @@ export const Ad2 = () => {
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1704872584176-0"
-        label="/22725519965/105"
+        id="div-gpt-ad-1712750453496-0"
+        label="/22725519965/102"
         size={[336, 280]}
       />
     </ClientWrapper>

@@ -6,7 +6,7 @@ const ArticleListView = ({ item }: { item: any }) => {
   return (
     <div className="w-full grid grid-cols-4 pb-4 border-b border-gray-500">
       <Link
-        href={"/article/" + encodeURIComponent(item.url)}
+        href={"/" + encodeURIComponent(item.url)}
         className="w-full col-span-4 md:col-span-3 h-full flex flex-col items-start cursor-pointer gap-y-2"
       >
         <h2 className="text-base xs:text-lg md:text-xl font-semibold pb-2 hover:text-[#0072aa]">

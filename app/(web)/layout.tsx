@@ -6,7 +6,7 @@ import Script from "next/script";
 const WebLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main>
-      <LoadingWrapper />
+      {/* <LoadingWrapper /> */}
       <Script
         strategy="beforeInteractive"
         async
