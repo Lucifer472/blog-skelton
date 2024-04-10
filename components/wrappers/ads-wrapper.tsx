@@ -13,7 +13,7 @@ export const AdsWrapper = ({
   size: googletag.GeneralSize;
 }) => {
   const pathname = usePathname();
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   window.googletag = window.googletag || { cmd: [] };
 

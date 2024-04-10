@@ -14,6 +14,9 @@ const Navbar = () => {
   return (
     <nav className="w-full min-h-16 bg-[#0072aa] bg-[url('/textured_stripes_brand_primary.png')] mb-4 shadow">
       <div className="w-full min-h-16 max-w-6xl mx-auto px-4 sm:px-2 flex items-center justify-between">
+        <div className="hidden sm:block">
+          <Logo />
+        </div>
         <ul className="hidden items-center justify-self-center gap-x-4 sm:flex">
           {navLinks.map((l) => (
             <li key={l.link}>
@@ -25,7 +28,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="flex items-center justify-start">
+        <div className="flex items-center justify-start sm:hidden">
           <button
             onClick={() => setNav(!nav)}
             className="flex sm:hidden items-center justify-center cursor-pointer"
