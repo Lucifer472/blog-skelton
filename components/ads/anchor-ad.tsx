@@ -9,7 +9,7 @@ const AnchorAd = () => {
 
       googletag.cmd.push(() => {
         anchorSlot = googletag.defineOutOfPageSlot(
-          "/22725519965/TTS_OJASINFO_ANCHOR",googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
+          "/22725519965/OJI_ANCHOR",googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
         );
 
         // Anchor slots return null if the page or device does not support anchors.

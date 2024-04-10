@@ -31,8 +31,8 @@ export const Ad3 = () => {
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1704872584176-0"
-        label="/22725519965/105"
+        id="div-gpt-ad-1712753625198-0"
+        label="/22725519965/104"
         size={[336, 280]}
       />
     </ClientWrapper>
@@ -43,7 +43,7 @@ export const Ad4 = () => {
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1704872584176-0"
+        id="div-gpt-ad-1712753705132-0"
         label="/22725519965/105"
         size={[336, 280]}
       />
