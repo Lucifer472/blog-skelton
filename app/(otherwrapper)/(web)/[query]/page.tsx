@@ -9,7 +9,7 @@ import ArticleView from "@/components/views/article-view";
 
 import { getBlogFromUrl } from "@/lib/blog";
 import Script from "next/script";
-import { Ad2, Ad3 } from "@/components/ads/ads";
+import { Ad1, Ad2 } from "@/components/ads/ads";
 
 export const generateMetadata = async ({
   params,
@@ -117,16 +117,16 @@ const BlogPostPage = async ({ params }: { params: { query: string } }) => {
           {blog.title}
         </Link>
       </div>
-      <Ad2 />
+      <Ad1 />
       <div className="w-full">
         <div className="padding">
-          <h1 className="text-xl leading-[1.2em] sm:text-3xl md:text-4xl md:leading-[1.5em] font-bold text-left text-gray-700 py-4">
+          <h1 className="text-xl leading-[1.2em] sm:text-3xl md:text-4xl md:leading-[1.5em] font-bold text-left text-gray-700 py-4 px-2">
             {blog.title}
           </h1>
         </div>
         <Separator />
         <TableContent headings={blogHeadings as any} />
-        <Ad3 />
+        <Ad2 />
         <ArticleView
           blogData={blog.blog as string}
           faqData={blog.faq as string}

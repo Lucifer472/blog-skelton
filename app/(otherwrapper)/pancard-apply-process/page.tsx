@@ -31,7 +31,6 @@ const PanCardApply = () => {
         </div>
         <Link
           href={"/pan-card-application-online-complete-info-2024"}
-          target="_blank"
           className="max-w-7xl mx-auto w-full flex items-center justify-center my-1 px-2"
         >
           <Image
@@ -45,13 +44,11 @@ const PanCardApply = () => {
         <div className="max-w-7xl mx-auto w-full flex items-center justify-center flex-col my-4 px-2 gap-y-2">
           <Link
             href={"/pan-card-application-online-complete-info-2024"}
-            target="_blank"
             className="w-full rounded-full bg-[#0072aa] text-2xl hover:bg-[#005eaa] text-white text-center py-4 md:py-6"
           >
             अनुरोध करना सीखें
           </Link>{" "}
           <Link
-            target="_blank"
             href={"/pan-card-application-online-complete-info-2024"}
             className="w-full rounded-full bg-[#0072aa] text-2xl hover:bg-[#005eaa] text-white text-center py-4 md:py-6"
           >

@@ -50,19 +50,3 @@ export const Ad4 = () => {
     </ClientWrapper>
   );
 };
-
-export const Ad5 = () => {
-  return (
-    <ClientWrapper>
-      <AdsWrapper id="ssss" label="/22725519965/ssss" size={[336, 280]} />
-    </ClientWrapper>
-  );
-};
-
-export const Ad6 = () => {
-  return (
-    <ClientWrapper>
-      <AdsWrapper id="asdasd" label="/22725519965/1ss05" size={[336, 280]} />
-    </ClientWrapper>
-  );
-};

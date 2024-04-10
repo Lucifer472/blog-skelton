@@ -53,7 +53,7 @@ export const AdsWrapper = ({
     <>
       {show && (
         <div className="text-center ">
-          <span className="text-xs">SPONSORED</span>
+          <span className="text-[10px]">SPONSORED</span>
           <div id={id} style={{ minWidth: "336px", minHeight: "280px" }}></div>
         </div>
       )}

@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import ClientWrapper from "../wrappers/client-wrapper";
-import { Ad5 } from "../ads/ads";
+import { Ad4 } from "../ads/ads";
 
 const ArticleView = ({
   blogData,
@@ -169,7 +169,7 @@ const ArticleView = ({
           })
         }
         <ClientWrapper>
-          <Ad5 />
+          <Ad4 />
         </ClientWrapper>
         {faq && faq[0].question !== "" && (
           <Accordion
