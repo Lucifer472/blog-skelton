@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -50,12 +49,12 @@ export const AdsWrapper = ({
 
   return (
     <>
-      {show && (
-        <div className="text-center ">
-          <span className="text-[10px]">SPONSORED</span>
-          <div id={id} style={{ minWidth: "336px", minHeight: "280px" }}></div>
-        </div>
-      )}
+      {/* {show && ( */}
+      <div className="text-center ">
+        <span className="text-[10px]">SPONSORED</span>
+        <div id={id} style={{ minWidth: "336px", minHeight: "280px" }}></div>
+      </div>
+      {/* )} */}
     </>
   );
 };

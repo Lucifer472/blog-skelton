@@ -76,7 +76,7 @@
 
   .loader {
     width: 1%;
-    animation: loader forwards 5s ease-in;
+    animation: loader forwards 4s ease-in;
   }
 
   @keyframes loader {

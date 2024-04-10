@@ -21,7 +21,7 @@ const LoadingWrapper = () => {
           return 100;
         }
       });
-    }, 50);
+    }, 40);
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [pathname]);
@@ -30,7 +30,7 @@ const LoadingWrapper = () => {
     setLoading(true);
     const timeoutId = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(timeoutId);
   }, [pathname]);

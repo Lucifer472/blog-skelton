@@ -1,4 +1,5 @@
 import { Ad1, Ad2, Ad3 } from "@/components/ads/ads";
+import Footer from "@/components/navigation/footer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -57,6 +58,7 @@ const PanCardApply = () => {
         </div>
         <Ad3 />
       </div>
+      <Footer />
     </>
   );
 };

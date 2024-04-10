@@ -28,7 +28,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="flex items-center justify-start sm:hidden">
+        <div className="flex gap-x-2 items-center justify-start sm:hidden">
           <button
             onClick={() => setNav(!nav)}
             className="flex sm:hidden items-center justify-center cursor-pointer"
