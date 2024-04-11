@@ -5,8 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
-import ClientWrapper from "../wrappers/client-wrapper";
-import { Ad4 } from "../ads/ads";
+import { Ad4, Ad5, Ad6, Ad7, LargeAd } from "../ads/ads";
 
 const ArticleView = ({
   blogData,
@@ -20,6 +19,31 @@ const ArticleView = ({
     question: string;
     answer: string;
   }[] = JSON.parse(faqData);
+
+  const adElement1 = {
+    type: "Ad",
+    data: LargeAd,
+  };
+
+  const adElement2 = {
+    type: "Ad",
+    data: Ad5,
+  };
+
+  const adElement3 = {
+    type: "Ad",
+    data: Ad6,
+  };
+
+  const adElement4 = {
+    type: "Ad",
+    data: Ad7,
+  };
+
+  blog.blocks.splice(1, 0, adElement1);
+  blog.blocks.splice(4, 0, adElement2);
+  blog.blocks.splice(7, 0, adElement3);
+  blog.blocks.splice(10, 0, adElement4);
 
   return (
     <div className="px-4 lg:px-0">
@@ -163,14 +187,14 @@ const ArticleView = ({
                     </table>
                   </div>
                 );
+              case "Ad":
+                return <b.data key={index} />;
               default:
                 return null;
             }
           })
         }
-        <ClientWrapper>
-          <Ad4 />
-        </ClientWrapper>
+        <Ad4 />
         {faq && faq[0].question !== "" && (
           <Accordion
             type="single"

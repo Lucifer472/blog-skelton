@@ -38,11 +38,14 @@ const LoadingWrapper = () => {
   return (
     <>
       {loading && (
-        <div className="w-full h-full min-h-screen bg-[url('/textured_stripes_brand_primary.png')] fixed flex items-center justify-center flex-col gap-y-4 z-[9999]">
-          <span className="text-white text-xl">Loading {percentage}%</span>
+        <div className="w-full h-full min-h-screen bg-[url('/textured_stripes_brand_primary.png')] fixed flex items-center justify-center flex-col gap-y-2 z-[9999] overflow-hidden">
+          <span className="text-white leading-[2em] text-center text-3xl">
+            Loading... <br /> {percentage}%
+          </span>
           <div className="flex items-start justify-start w-full">
-            <div className="bg-white h-2 loader"></div>
+            <div className="bg-white h-1 loader"></div>
           </div>
+          <div className="mt-[100px] h-2 w-full"></div>
         </div>
       )}
     </>

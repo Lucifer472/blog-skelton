@@ -108,3 +108,37 @@ export const getAllBlogs = async () => {
     return null;
   }
 };
+
+export const getRecentBlogs = async (authrId: string) => {
+  try {
+    const data = await db.blog.findMany({
+      where: {
+        authrId,
+      },
+      take: 4,
+    });
+
+    return data;
+  } catch (error) {
+    return null;
+  }
+};
+
+export const getSkipBlog = async (id: number) => {
+  try {
+    const data = await db.blog.findMany({
+      where: {
+        NOT: [
+          {
+            id,
+          },
+        ],
+      },
+      take: 4,
+    });
+
+    return data;
+  } catch (error) {
+    return null;
+  }
+};

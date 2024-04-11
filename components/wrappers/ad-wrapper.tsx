@@ -6,10 +6,12 @@ export const AdsWrapper = ({
   id,
   label,
   size,
+  divSize,
 }: {
   id: string;
   label: string;
   size: googletag.GeneralSize;
+  divSize?: { x: number; y: number };
 }) => {
   const pathname = usePathname();
   const [show, setShow] = useState(true);
@@ -49,12 +51,18 @@ export const AdsWrapper = ({
 
   return (
     <>
-      {/* {show && ( */}
-      <div className="text-center ">
-        <span className="text-[10px]">SPONSORED</span>
-        <div id={id} style={{ minWidth: "336px", minHeight: "280px" }}></div>
-      </div>
-      {/* )} */}
+      {show && (
+        <div className="text-center flex w-full items-center justify-center flex-col">
+          <span className="text-[10px]">SPONSORED</span>
+          <div
+            id={id}
+            style={{
+              minWidth: divSize ? divSize.x : "336px",
+              minHeight: divSize ? divSize.y : "280px",
+            }}
+          ></div>
+        </div>
+      )}
     </>
   );
 };

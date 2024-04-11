@@ -28,10 +28,10 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="flex gap-x-2 items-center justify-start sm:hidden">
+        <div className="flex items-center justify-between w-full sm:hidden">
           <button
             onClick={() => setNav(!nav)}
-            className="flex sm:hidden items-center justify-center cursor-pointer"
+            className="flex p-0 sm:hidden items-center justify-center cursor-pointer"
           >
             {nav ? (
               <MenuIcon className="text-white" />
@@ -40,6 +40,7 @@ const Navbar = () => {
             )}
           </button>
           <Logo />
+          <div className="w-[24px]"></div>
         </div>
       </div>
       {!nav && (
@@ -53,13 +54,6 @@ const Navbar = () => {
               </Button>
             </li>
           ))}
-          <li>
-            <Button variant={"link"} onClick={() => setNav(true)} asChild>
-              <Link className="text-white text-[1rem]" href={"/loan"}>
-                Pan Card
-              </Link>
-            </Button>
-          </li>
         </ul>
       )}
     </nav>

@@ -8,7 +8,7 @@ interface LogoProps {
 
 const Logo = ({ width, height }: LogoProps) => {
   return (
-    <Link href="/" className={cn("relative p-2 w-[125px]")}>
+    <Link href="/" className={cn("relative w-[125px]")}>
       <span className="text-white font-semibold text-nowrap text-2xl">
         OJAS INFO
       </span>

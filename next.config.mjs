@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         hostname: "images.drivingexamexpert.com",
-        pathname: "/blogs/**",
+        pathname: "/**",
         port: "",
         protocol: "https",
       },

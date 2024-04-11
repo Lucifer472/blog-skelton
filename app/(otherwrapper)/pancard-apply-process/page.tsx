@@ -1,11 +1,20 @@
 import { Ad1, Ad2, Ad3 } from "@/components/ads/ads";
 import Footer from "@/components/navigation/footer";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Indian PAN Card – See How to Get Your PAN Card",
+  description:
+    "Learn how to apply for Indian PAN Card online easily and quickly, with information on required documents and process steps.",
+  keywords:
+    "Apply for Pan Card Online India,Pan Card Correction India,Lost Pan Card India,Change of Name Pan Card India,Pan Card Status Check India,Urgent Pan Card India,Pan Card for Foreigners India,Pan Card for NRI India,Duplicate Pan Card India,Pan Card Address Change India,Income Tax Filing IndiaFile Income Tax Online India,Income Tax Return India,Income Tax Calculator India,Chartered Accountant for Income Tax India,Income Tax Consultant India,Capital Gains Tax India,TDS on Salary India,Income Tax Slab India,ITR Forms India",
+};
+
 const PanCardApply = () => {
   return (
-    <>
+    <main>
       <div className="w-full flex flex-col gap-y-1">
         <div className="w-full h-20 flex items-center justify-center bg-[#0072aa]">
           <h2 className="text-white text-2xl font-medium max-w-7xl mx-auto px-2">
@@ -48,7 +57,7 @@ const PanCardApply = () => {
             className="w-full rounded-full bg-[#0072aa] text-2xl hover:bg-[#005eaa] text-white text-center py-4 md:py-6"
           >
             अनुरोध करना सीखें
-          </Link>{" "}
+          </Link>
           <Link
             href={"/pan-card-application-online-complete-info-2024"}
             className="w-full rounded-full bg-[#0072aa] text-2xl hover:bg-[#005eaa] text-white text-center py-4 md:py-6"
@@ -59,7 +68,7 @@ const PanCardApply = () => {
         <Ad3 />
       </div>
       <Footer />
-    </>
+    </main>
   );
 };
 
