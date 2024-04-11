@@ -5,6 +5,8 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 
+export const revalidate = 0;
+
 const AuthorPage = async () => {
   const data = await getAllUser();
 

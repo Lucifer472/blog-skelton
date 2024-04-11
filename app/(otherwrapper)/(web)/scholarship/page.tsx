@@ -9,6 +9,8 @@ import { Ad1, Ad2, Ad3 } from "@/components/ads/ads";
 
 import { getBlogsByCat } from "@/lib/blog";
 
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: "Scholarship",
   robots: {
