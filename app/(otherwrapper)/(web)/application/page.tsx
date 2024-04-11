@@ -26,7 +26,8 @@ const ArticlePage = async ({ searchParams }: { searchParams: any }) => {
   const data = await getBlogsByCat("application", page);
   if (!data) return;
 
-  data.pop();
+  const isNext = data.length === 11;
+  if (isNext) data.pop();
 
   return (
     <div className="min-w-[340px] w-[90%] max-w-[1024px] mx-auto flex flex-col items-start justify-start">
@@ -40,11 +41,7 @@ const ArticlePage = async ({ searchParams }: { searchParams: any }) => {
           <NoArticleFound />
         )}
         {data.length > 0 && (
-          <Pagination
-            isBack={page > 1}
-            isNext={data.length !== 11}
-            page={page}
-          />
+          <Pagination isBack={page > 1} isNext={!isNext} page={page} />
         )}
         <Ad3 />
       </div>
