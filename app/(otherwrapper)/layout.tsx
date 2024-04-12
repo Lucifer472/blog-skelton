@@ -14,6 +14,21 @@ const OtherLayout = ({ children }: { children: React.ReactNode }) => {
         src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
         id="google-ads"
       />
+      <Script
+        strategy="beforeInteractive"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-R9J2KRQV13"
+        id="google-analytics"
+      />
+      <Script strategy="beforeInteractive" id="google-analytics-body">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-R9J2KRQV13');
+        `}
+      </Script>
       {children}
       <ClientWrapper>
         <>
