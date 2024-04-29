@@ -43,8 +43,6 @@ export const AdsWrapper = ({
           if (e.isEmpty) {
             setShow(false);
           }
-        } else {
-          setShow(false);
         }
       });
       googletag.display(id);

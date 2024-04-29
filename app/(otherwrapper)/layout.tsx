@@ -7,7 +7,7 @@ import InterstitialAd from "@/components/ads/interstitial-ad";
 const OtherLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <LoadingWrapper />
+      {/* <LoadingWrapper /> */}
       <Script
         strategy="beforeInteractive"
         async
