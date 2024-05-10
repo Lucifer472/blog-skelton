@@ -47,7 +47,7 @@ const CustomAbcPage = async () => {
             >
               {a}
             </Link>
-            {index === 14 && <Ad4 key={"asd"} />}
+            {index === 13 && <Ad4 key={"asd"} />}
           </>
         ))}
       </div>
