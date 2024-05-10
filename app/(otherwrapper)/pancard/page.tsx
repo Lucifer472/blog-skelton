@@ -11,20 +11,22 @@ import { ReadMoreArticle } from "@/components/wrappers/read-more-article";
 import { Ad1, Ad2, Ad3, Ad4, Ad5 } from "@/components/ads/ads";
 
 const CustomAbcPage = async () => {
-  const data = await getBlogFromUrl("mahila-samridhi-yojana-2024");
+  const data = await getBlogFromUrl(
+    "download-epan-card-get-epan-complete-information"
+  );
 
   if (!data) return redirect("/");
 
   return (
     <div className="w-full flex flex-col gap-y-8 pt-4 max-w-7xl mx-auto">
-      <h2 className="text-center font-bold text-2xl sm:text-3xl md:text-5xl leading-[1.2]">
+      <h2 className="text-center leading-[1.5] sm:leading-[1.5] md:leading-[1.5] font-bold text-3xl md:text-5xl">
         👆🏻
         <span className="text-gradient">
-          Click on the first letter of your name{" "}
+          अपने नाम के पहले अक्षर पर क्लिक करें
         </span>
         😋 <br /> 🎷{" "}
         <span className="text-gradient">
-          Let&apos;s see which song play for you
+          आइए देखते है आपके लिए कौन सा गाना बजता है
         </span>{" "}
         🥁
       </h2>
@@ -34,7 +36,7 @@ const CustomAbcPage = async () => {
           <>
             <Link
               key={a}
-              href={"/pancard/" + a.toLowerCase()}
+              href={"/pancard/apply"}
               className={cn(
                 "w-[45%] xs:w-[160px] sm:w-[200px] md:w-[240px] py-3 text-center text-white text-lg xs:text-xl sm:text-2xl font-semibold rounded-md border-2 border-black shadow",
                 index % 4 === 0 && "bg-red-700",
