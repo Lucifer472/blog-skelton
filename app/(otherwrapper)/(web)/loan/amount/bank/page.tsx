@@ -9,7 +9,7 @@ import ClientWrapper from "@/components/wrappers/client-wrapper";
 
 const BankPage = async () => {
   const data = await getBlogFromUrl(
-    "download-epan-card-get-epan-complete-information"
+    "emi-calculator-for-personal-loan-in-india"
   );
   return (
     <div className="w-full h-full">

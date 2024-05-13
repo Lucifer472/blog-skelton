@@ -35,9 +35,7 @@ export default async function Personal() {
     }
   );
 
-  const data = await getBlogFromUrl(
-    "get-income-certificate-aavak-no-dakhlo-from-digital-gujarat-"
-  );
+  const data = await getBlogFromUrl("new-car-loan-emi-calculator");
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center pb-24">

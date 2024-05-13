@@ -13,7 +13,7 @@ import { Header2Text } from "@/components/etc/header-2";
 
 const EmploymentSelectPage = async () => {
   const data = await getBlogFromUrl(
-    "minor-pan-card-process-to-apply-pan-card-for-a-child"
+    "phonepe-personal-loan-phonepe-is-offering-a-personal-loan-of-rs-50000"
   );
 
   const EmiYearWiseData = dynamic(

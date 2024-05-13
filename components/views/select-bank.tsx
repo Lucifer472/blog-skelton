@@ -18,7 +18,9 @@ const SelectBank = () => {
         ))}
       </div>
       <Button className="bg-[#0088FF] hover:bg-[#0088FF]" asChild>
-        <Link href={`/mahila-samridhi-yojana-2024`}>Get Loan info</Link>
+        <Link href={`/hdfc-personal-loan-step-by-step-process-`}>
+          Get Loan info
+        </Link>
       </Button>
     </div>
   );

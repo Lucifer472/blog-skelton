@@ -8,9 +8,7 @@ import { ReadMoreArticle } from "@/components/views/read-more-article";
 import { HeaderText } from "@/components/etc/header";
 
 const LoanPage = async () => {
-  const data = await getBlogFromUrl(
-    "download-epan-card-get-epan-from-nsdl-utiitsl"
-  );
+  const data = await getBlogFromUrl("hdfc-personal-loan-step-by-step-process-");
 
   return (
     <div className="w-full h-full pb-4">
