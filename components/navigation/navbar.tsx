@@ -27,6 +27,13 @@ const Navbar = () => {
               </Button>
             </li>
           ))}
+          <li>
+            <Button variant={"default"} className="bg-white text-black" asChild>
+              <Link className="text-black text-[1rem]" href={"/loan "}>
+                Get Loan
+              </Link>
+            </Button>
+          </li>
         </ul>
         <div className="flex items-center justify-between w-full sm:hidden">
           <button
@@ -54,6 +61,13 @@ const Navbar = () => {
               </Button>
             </li>
           ))}
+          <li>
+            <Button variant={"link"} asChild>
+              <Link className="text-white text-[1rem]" href={"/loan "}>
+                Get Loan
+              </Link>
+            </Button>
+          </li>
         </ul>
       )}
     </nav>
