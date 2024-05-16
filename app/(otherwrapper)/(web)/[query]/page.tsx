@@ -135,6 +135,12 @@ const BlogPostPage = async ({ params }: { params: { query: string } }) => {
         </div>
         <Separator />
         <TableContent headings={blogHeadings as any} />
+
+        <Ad2 />
+        <ArticleView
+          blogData={blog.blog as string}
+          faqData={blog.faq as string}
+        />
         <AuthorView
           img={author?.image as string}
           name={author?.name || "Hardik Sadhu"}
@@ -144,12 +150,7 @@ const BlogPostPage = async ({ params }: { params: { query: string } }) => {
             year: "numeric",
           })}
         />
-        <Ad2 />
-        <ArticleView
-          blogData={blog.blog as string}
-          faqData={blog.faq as string}
-        />
-        <div className="w-full flex-col gap-y-2 px-4">
+        <div className="w-full flex-col gap-y-2 px-4 mt-4">
           <HeaderText label="You May Also Like" />
           <div className="w-full flex flex-col items-start gap-y-4 my-2">
             {data &&
