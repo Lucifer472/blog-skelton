@@ -25,7 +25,6 @@ export const AdsWrapper = ({
       if (sl !== null) {
         sl.addService(googletag.pubads());
       }
-      googletag.pubads().enableSingleRequest();
       googletag.enableServices();
 
       googletag.pubads().addEventListener("slotOnload", (e) => {
