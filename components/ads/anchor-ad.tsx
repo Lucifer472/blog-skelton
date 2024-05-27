@@ -15,8 +15,6 @@ const AnchorAd = () => {
           anchorSlot.setTargeting("test", "anchor").addService(googletag.pubads());
         }
 
-        // Enable SRA and services.
-        googletag.pubads().enableSingleRequest();
         googletag.enableServices();
 
         googletag.display(anchorSlot);
