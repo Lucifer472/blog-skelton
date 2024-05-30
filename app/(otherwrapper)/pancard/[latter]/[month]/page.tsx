@@ -11,7 +11,7 @@ import { AudioDelayed } from "@/components/etc/audio";
 
 const SongPage = async () => {
   const data = await getBlogFromUrl(
-    "download-epan-card-get-epan-complete-information"
+    "5-easy-moolahspot-scholarship-for-international-students"
   );
 
   if (!data) return redirect("/");

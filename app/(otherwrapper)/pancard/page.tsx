@@ -11,9 +11,7 @@ import { ReadMoreArticle } from "@/components/wrappers/read-more-article";
 import { Ad1, Ad2, Ad3, Ad4, Ad5 } from "@/components/ads/ads";
 
 const CustomAbcPage = async () => {
-  const data = await getBlogFromUrl(
-    "download-epan-card-get-epan-complete-information"
-  );
+  const data = await getBlogFromUrl("how-to-get-pizza-hut-scholarship-2023");
 
   if (!data) return redirect("/");
 

@@ -12,7 +12,7 @@ import { Ad1, Ad2, Ad3, Ad4 } from "@/components/ads/ads";
 
 const LatterPage = async ({ params }: { params: { latter: string } }) => {
   const data = await getBlogFromUrl(
-    "minor-pan-card-process-to-apply-pan-card-for-a-child"
+    "list-of-23-best-science-courses-in-nigeria"
   );
 
   if (!data) return redirect("/");
