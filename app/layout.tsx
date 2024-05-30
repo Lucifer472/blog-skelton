@@ -6,9 +6,9 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ojasinfo.in"),
+  metadataBase: new URL("https://insurance.santosfutebolarte.com"),
   title: {
-    default: "Ojasinfo",
+    default: "Insurance",
     template: "%s | Government Jobs",
   },
   description:
