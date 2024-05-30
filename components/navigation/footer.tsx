@@ -16,7 +16,8 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-white text-xs pt-2">
-          Copyright © 2024-2025 ojasinfo.in. All Right Reserved.
+          Copyright © 2024-2025 insurance.santosfutebolarte.com. All Right
+          Reserved.
         </p>
       </div>
     </footer>
