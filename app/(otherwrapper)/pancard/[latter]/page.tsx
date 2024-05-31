@@ -60,7 +60,7 @@ const LatterPage = async ({ params }: { params: { latter: string } }) => {
           />
         </ReadMoreArticle>
       )}
-      <Ad4 />
+      {/* <Ad4 /> */}
     </div>
   );
 };

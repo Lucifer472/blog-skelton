@@ -6,11 +6,7 @@ import ClientWrapper from "@/components/wrappers/client-wrapper";
 export const Ad1 = () => {
   return (
     <ClientWrapper>
-      <AdsWrapper
-        id="div-gpt-ad-1712749805817-0"
-        label="/22725519965/101"
-        size={[336, 280]}
-      />
+      <AdsWrapper id="2087020365" label="/22725519965/101" size={[336, 280]} />
     </ClientWrapper>
   );
 };
@@ -18,11 +14,7 @@ export const Ad1 = () => {
 export const Ad2 = () => {
   return (
     <ClientWrapper>
-      <AdsWrapper
-        id="div-gpt-ad-1712750453496-0"
-        label="/22725519965/102"
-        size={[336, 280]}
-      />
+      <AdsWrapper id="8461375889" label="/22725519965/102" size={[336, 280]} />
     </ClientWrapper>
   );
 };
@@ -30,11 +22,7 @@ export const Ad2 = () => {
 export const Ad3 = () => {
   return (
     <ClientWrapper>
-      <AdsWrapper
-        id="div-gpt-ad-1712753625198-0"
-        label="/22725519965/104"
-        size={[336, 280]}
-      />
+      <AdsWrapper id="1198579484" label="/22725519965/104" size={[336, 280]} />
     </ClientWrapper>
   );
 };

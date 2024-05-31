@@ -20,30 +20,30 @@ const ArticleView = ({
     answer: string;
   }[] = JSON.parse(faqData);
 
-  const adElement1 = {
-    type: "Ad",
-    data: LargeAd,
-  }; 
+  // const adElement1 = {
+  //   type: "Ad",
+  //   data: LargeAd,
+  // };
 
-  const adElement2 = {
-    type: "Ad",
-    data: Ad5,
-  };
+  // const adElement2 = {
+  //   type: "Ad",
+  //   data: Ad5,
+  // };
 
-  const adElement3 = {
-    type: "Ad",
-    data: Ad6,
-  };
+  // const adElement3 = {
+  //   type: "Ad",
+  //   data: Ad6,
+  // };
 
-  const adElement4 = {
-    type: "Ad",
-    data: Ad7,
-  };
+  // const adElement4 = {
+  //   type: "Ad",
+  //   data: Ad7,
+  // };
 
-  blog.blocks.splice(1, 0, adElement1);
-  blog.blocks.splice(4, 0, adElement2);
-  blog.blocks.splice(7, 0, adElement3);
-  blog.blocks.splice(10, 0, adElement4);
+  // blog.blocks.splice(1, 0, adElement1);
+  // blog.blocks.splice(4, 0, adElement2);
+  // blog.blocks.splice(7, 0, adElement3);
+  // blog.blocks.splice(10, 0, adElement4);
 
   return (
     <div className="px-4 lg:px-0">
@@ -194,7 +194,7 @@ const ArticleView = ({
             }
           })
         }
-        <Ad4 />
+        {/* <Ad4 /> */}
         {faq && faq[0].question !== "" && (
           <Accordion
             type="single"

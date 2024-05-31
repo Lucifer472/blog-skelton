@@ -1,26 +1,33 @@
-import ClientWrapper from "@/components/wrappers/client-wrapper";
-import LoadingWrapper from "@/components/wrappers/loading-wrapper";
+// import ClientWrapper from "@/components/wrappers/client-wrapper";
+// import LoadingWrapper from "@/components/wrappers/loading-wrapper";
 import Script from "next/script";
-import AnchorAd from "@/components/ads/anchor-ad";
-import InterstitialAd from "@/components/ads/interstitial-ad";
+// import AnchorAd from "@/components/ads/anchor-ad";
+// import InterstitialAd from "@/components/ads/interstitial-ad";
 
 const OtherLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       {/* <LoadingWrapper /> */}
-      <Script
+      {/* <Script
         strategy="beforeInteractive"
         async
         src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
         id="google-ads"
-      />
+      /> */}
       <Script
+        strategy="beforeInteractive"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3302857861058313"
+        id="google-ads"
+        crossOrigin="anonymous"
+      />
+      {/* <Script
         strategy="beforeInteractive"
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-R9J2KRQV13"
         id="google-analytics"
-      />
-      <Script strategy="beforeInteractive" id="google-analytics-body">
+      /> */}
+      {/* <Script strategy="beforeInteractive" id="google-analytics-body">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -28,14 +35,14 @@ const OtherLayout = ({ children }: { children: React.ReactNode }) => {
 
           gtag('config', 'G-R9J2KRQV13');
         `}
-      </Script>
+      </Script> */}
       {children}
-      <ClientWrapper>
+      {/* <ClientWrapper>
         <>
           <AnchorAd />
           <InterstitialAd />
         </>
-      </ClientWrapper>
+      </ClientWrapper> */}
     </>
   );
 };
