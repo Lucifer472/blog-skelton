@@ -7,8 +7,8 @@ export const Ad1 = () => {
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1712749805817-0"
-        label="/22725519965/101"
+        id="div-gpt-ad-1717161070616-0"
+        label="/22725519965/test"
         size={[336, 280]}
       />
     </ClientWrapper>
