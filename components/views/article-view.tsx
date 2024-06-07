@@ -23,7 +23,7 @@ const ArticleView = ({
   const adElement1 = {
     type: "Ad",
     data: LargeAd,
-  }; 
+  };
 
   const adElement2 = {
     type: "Ad",
