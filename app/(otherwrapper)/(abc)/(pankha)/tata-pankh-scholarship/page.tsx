@@ -29,7 +29,7 @@ const aPage = async () => {
       </ExtraButton>
       <ArticleViewDemo
         blogData={data?.blog?.toString() as string}
-        title={data.title}
+        title={data?.title}
       />
     </section>
   );
