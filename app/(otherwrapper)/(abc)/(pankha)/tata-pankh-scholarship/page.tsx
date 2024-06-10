@@ -27,7 +27,10 @@ const aPage = async () => {
       >
         No ❌
       </ExtraButton>
-      <ArticleViewDemo blogData={data?.blog?.toString() as string} />
+      <ArticleViewDemo
+        blogData={data?.blog?.toString() as string}
+        title={data.title}
+      />
     </section>
   );
 };
