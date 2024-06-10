@@ -5,13 +5,13 @@ const ArticleViewDemo = ({
   title,
 }: {
   blogData: string;
-  title: string;
+  title: string | undefined;
 }) => {
   const blog = JSON.parse(blogData);
 
   return (
     <article className="w-full flex flex-col items-start justify-start gap-y-1 prose demo">
-      <h2>{title}</h2>
+      <h2>{title as string}</h2>
       {
         // @ts-ignore
         blog.blocks.map((b: any, index) => {
