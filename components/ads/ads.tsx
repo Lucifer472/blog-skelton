@@ -94,6 +94,7 @@ export const SmallAd1 = () => {
         id="div-gpt-ad-1719061846219-0"
         label="/22725519965/300x75"
         size={[300, 75]}
+        divSize={{ x: 300, y: 75 }}
       />
     </ClientWrapper>
   );
@@ -106,6 +107,7 @@ export const SmallAd2 = () => {
         id="div-gpt-ad-1719061904679-0"
         label="/22725519965/300x75_2"
         size={[300, 75]}
+        divSize={{ x: 300, y: 75 }}
       />
     </ClientWrapper>
   );

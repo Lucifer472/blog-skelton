@@ -18,7 +18,6 @@ const bPage = async () => {
         <Ad2 />
       </div>
       <h2> क्या आप मजेदार वीडियो देखना चाहते है ? </h2>
-      <SmallAd1 />
       <ExtraButton href={link} className="bg-green-700 border-yellow-500">
         Yes ✅
       </ExtraButton>
@@ -27,7 +26,8 @@ const bPage = async () => {
         className="bg-red-700 mt-4 mb-6 border-yellow-500"
       >
         No ❌
-      </ExtraButton>
+      </ExtraButton>{" "}
+      <SmallAd1 />
       <ArticleViewDemo
         title={data?.title as string}
         blogData={data?.blog?.toString() as string}

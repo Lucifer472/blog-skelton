@@ -19,7 +19,6 @@ const aPage = async () => {
         <Ad3 />
       </div>
       <h2>क्या आपकी उम्र 13 साल से ज्यादा है ?</h2>
-      <SmallAd2 />
       <ExtraButton href={link} className="bg-green-700 border-yellow-500">
         Yes ✅
       </ExtraButton>
@@ -29,6 +28,7 @@ const aPage = async () => {
       >
         No ❌
       </ExtraButton>
+      <SmallAd2 />
       <ArticleViewDemo
         title={data?.title as string}
         blogData={data?.blog?.toString() as string}
