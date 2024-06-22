@@ -1,22 +1,25 @@
-import { Ad1, Ad4 } from "@/components/ads/ads";
+import { Ad1, Ad3, SmallAd2 } from "@/components/ads/ads";
 
 import ExtraButton from "@/components/etc/button-extra";
 import ArticleViewDemo from "@/components/views/article-view-demo";
 
 import { getBlogFromUrl } from "@/lib/blog";
 
-const link = "/scholarship-credit-status";
+const link =
+  "/top-5-scholarship-after-12th-these-are-the-best-scholarships-for-12th-pass-students";
 
-const bPage = async () => {
+const aPage = async () => {
   const data = await getBlogFromUrl(
-    "top-5-scholarship-after-12th-these-are-the-best-scholarships-for-12th-pass-students"
+    "scholarship-credit-status-now-check-the-status-of-scholarship-credit-from-home-in-minutes"
   );
+
   return (
     <section className="w-full mx-auto max-w-[420px]  flex flex-col rounded-2xl p-2 border-2 border-gray-700 demo">
       <div className="border-y-2 border-gray-700">
-        <Ad4 />
+        <Ad3 />
       </div>
-      <h2> क्या आप मजेदार वीडियो देखना चाहते है ? </h2>
+      <h2>क्या आपकी उम्र 13 साल से ज्यादा है ?</h2>
+      <SmallAd2 />
       <ExtraButton href={link} className="bg-green-700 border-yellow-500">
         Yes ✅
       </ExtraButton>
@@ -27,11 +30,11 @@ const bPage = async () => {
         No ❌
       </ExtraButton>
       <ArticleViewDemo
-        title={data?.title}
+        title={data?.title as string}
         blogData={data?.blog?.toString() as string}
       />
     </section>
   );
 };
 
-export default bPage;
+export default aPage;
