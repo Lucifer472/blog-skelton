@@ -3,10 +3,10 @@
 import * as z from "zod";
 import { auth } from "@/auth";
 
-import { addBlog } from "@/lib/blog";
+import { updateBlogById } from "@/lib/blog";
 import { BlogSchema } from "@/schema";
 
-export const createBlog = async (v: z.infer<typeof BlogSchema>) => {
+export const updateBlog = async (v: z.infer<typeof BlogSchema>, id: number) => {
   const validateData = BlogSchema.safeParse(v);
 
   if (!validateData.success) {
@@ -30,17 +30,18 @@ export const createBlog = async (v: z.infer<typeof BlogSchema>) => {
     }
   }
 
-  const blog = await addBlog(
+  const blog = await updateBlogById(
     data,
     session.user.id,
     data.title
       .toLowerCase()
       .replace(/[^\w\s]|_/g, "")
       .replace(/\s+/g, "-"),
-    img
+    img,
+    id
   );
   if (blog.success) {
-    return { success: "Blog Created Successfully" };
+    return { success: "Blog Updated Successfully" };
   }
   return { error: "Something went wrong" };
 };

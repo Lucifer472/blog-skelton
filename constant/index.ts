@@ -273,3 +273,5 @@ export const loanSelectType = [
     img: "/car.webp",
   },
 ];
+
+export const indexValues = ["one", "two", "three"];

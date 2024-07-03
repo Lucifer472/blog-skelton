@@ -21,9 +21,17 @@ const AdminNavbar = () => {
         <Button
           variant={"link"}
           size={"sm"}
-          className={pathname === "/blogs" ? "underline" : ""}
+          className={pathname === "/admin" ? "underline" : ""}
         >
-          <Link href={"/blogs"}>Add Blogs</Link>
+          <Link href={"/admin"}>Add Blogs</Link>
+        </Button>
+        <Separator orientation="vertical" />{" "}
+        <Button
+          variant={"link"}
+          size={"sm"}
+          className={pathname === "/admin/list" ? "underline" : ""}
+        >
+          <Link href={"/admin/list"}>List Blogs</Link>
         </Button>
         <Separator orientation="vertical" />
         <Button
@@ -31,7 +39,7 @@ const AdminNavbar = () => {
           size={"sm"}
           className={pathname === "/user" ? "underline" : ""}
         >
-          <Link href={"/user"}>Add User</Link>
+          <Link href={"/admin/user"}>Add User</Link>
         </Button>
         <Separator orientation="vertical" />
         <Button variant={"link"} onClick={handleLogout} size={"sm"}>

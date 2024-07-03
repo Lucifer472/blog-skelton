@@ -21,6 +21,47 @@ export const addBlog = async (
         faq: value.faq,
         category: value.category,
         authrId: userId,
+        isIndex: value.isIndex,
+        isPending: value.isPending === "true" ? true : false,
+        connect: value.connect,
+        pageText: value.pageText === "" ? null : value.pageText,
+      },
+    });
+
+    if (!data) return { error: "Something went wrong" };
+
+    return { success: data };
+  } catch (error) {
+    return { error: "Something went wrong!" };
+  }
+};
+
+export const updateBlogById = async (
+  value: z.infer<typeof BlogSchema>,
+  userId: string,
+  url: string,
+  img: string,
+  id: number
+) => {
+  try {
+    const data = await db.blog.update({
+      where: {
+        id,
+      },
+      data: {
+        title: value.title,
+        url: url,
+        img: img,
+        keywords: value.keywords,
+        description: value.desc,
+        blog: value.blog,
+        faq: value.faq,
+        category: value.category,
+        authrId: userId,
+        isIndex: value.isIndex,
+        isPending: value.isPending === "true" ? true : false,
+        connect: value.connect,
+        pageText: value.pageText === "" ? null : value.pageText,
       },
     });
 
@@ -156,4 +197,47 @@ export const getSkipBlog = async (id: number) => {
   } catch (error) {
     return null;
   }
+};
+
+export const getEditBlogs = async (q?: string) => {
+  if (!q) {
+    const data = await db.blog.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+      select: {
+        url: true,
+        id: true,
+        title: true,
+      },
+    });
+
+    return data;
+  }
+
+  const data = await db.blog.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+    where: {
+      OR: [
+        {
+          title: {
+            contains: q,
+          },
+        },
+        {
+          url: {
+            contains: q,
+          },
+        },
+      ],
+    },
+    select: {
+      url: true,
+      id: true,
+      title: true,
+    },
+  });
+  return data;
 };

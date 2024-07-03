@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import type { Blog } from "@prisma/client";
+import toast from "react-hot-toast";
 
 import {
   Form,
@@ -26,28 +28,28 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Editor from "@/components/etc/editor";
 import { Button } from "@/components/ui/button";
 import { FaqEditor } from "@/components/etc/faq-editor";
-
-import { BlogSchema } from "@/schema";
-import { createBlog } from "@/action/create-blog";
-import toast from "react-hot-toast";
-import { Category, indexValues } from "@/constant";
 import { LiveBlogSearch } from "./live-blog-search";
 
-const BlogForm = () => {
-  const [data, setData] = useState<any>(null);
+import { updateBlog } from "@/action/update-blog";
+import { BlogSchema } from "@/schema";
+
+import { Category, indexValues } from "@/constant";
+
+const BlogEditForm = ({ values }: { values: Blog }) => {
+  const [data, setData] = useState<any>(JSON.parse(values.blog as string));
+
   const form = useForm<z.infer<typeof BlogSchema>>({
     resolver: zodResolver(BlogSchema),
     defaultValues: {
-      blog: "",
-      category: "",
-      desc: "",
-      faq: "",
-      keywords: "",
-      title: "",
-      isIndex: "one",
-      connect: null,
-      isPending: "true",
-      pageText: "",
+      category: values.category ? values.category : "",
+      desc: values.description,
+      keywords: values.keywords,
+      title: values.title,
+      isIndex: values.isIndex,
+      connect: values.connect,
+      isPending: values.isPending ? "true" : "false",
+      pageText: values.pageText,
+      faq: JSON.parse(values.faq as string),
     },
   });
 
@@ -56,7 +58,7 @@ const BlogForm = () => {
   }, [data, form]);
 
   const onSubmit = (v: z.infer<typeof BlogSchema>) => {
-    createBlog(v).then((res) => {
+    updateBlog(v, values.id).then((res) => {
       if (res.error) {
         toast.error(res.error);
       }
@@ -229,7 +231,7 @@ const BlogForm = () => {
                 <FormLabel>Connect to Blog</FormLabel>
                 <FormControl>
                   <LiveBlogSearch
-                    initialValue={null}
+                    initialValue={values.connect}
                     setField={field.onChange}
                   />
                 </FormControl>
@@ -255,7 +257,10 @@ const BlogForm = () => {
           />
           <div className="w-full space-y-1">
             <h2 className="text-lg">Blog:</h2>
-            <Editor setData={setData} />
+            <Editor
+              setData={setData}
+              initialData={JSON.parse(values.blog as string)}
+            />
           </div>
           <FaqEditor setValue={form.setValue} />
         </div>
@@ -267,4 +272,4 @@ const BlogForm = () => {
   );
 };
 
-export default BlogForm;
+export default BlogEditForm;

@@ -27,11 +27,13 @@ const Editor = ({
   initialData?: any;
 }) => {
   const editorRef = useRef<EditorJS | null>(null);
+
   useEffect(() => {
     if (initialData) {
       setData(initialData);
     }
-  }, [initialData, setData]);
+  }, []);
+
   useEffect(() => {
     if (!editorRef.current) {
       editorRef.current = new EditorJS({
