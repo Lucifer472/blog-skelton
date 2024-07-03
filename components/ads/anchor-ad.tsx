@@ -9,7 +9,7 @@ const AnchorAd = () => {
 
       googletag.cmd.push(() => {
         anchorSlot = googletag.defineOutOfPageSlot(
-          "/22725519965/OJI_ANCHOR",googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
+          "/22725519965/A1",googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
         );
         if (anchorSlot) {
           anchorSlot.setTargeting("test", "anchor").addService(googletag.pubads());

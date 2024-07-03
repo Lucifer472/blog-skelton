@@ -1,7 +1,7 @@
 import { CalendarFold, ChevronDownCircle, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Ad4, Ad5, Ad6, Ad7 } from "../ads/ads";
+import { Ad4, Ad5, Ad6 } from "../ads/ads";
 
 const ArticleListView = ({ item, number }: { item: any; number?: number }) => {
   return (
@@ -50,7 +50,6 @@ const ArticleListView = ({ item, number }: { item: any; number?: number }) => {
       {number === 1 && <Ad4 />}
       {number === 3 && <Ad5 />}
       {number === 5 && <Ad6 />}
-      {number === 7 && <Ad7 />}
     </>
   );
 };
