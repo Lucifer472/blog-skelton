@@ -31,3 +31,14 @@ export const BlogSchema = z.object({
   connect: z.string().nullable(),
   pageText: z.string().nullable(),
 });
+
+const AdSchema = z.object({
+  adId: z.string(),
+  label: z.string(),
+  sizeX: z.string(),
+  sizeY: z.string(),
+});
+
+export const AllAdSchema = z.object({
+  ads: z.array(AdSchema),
+});

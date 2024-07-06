@@ -2,100 +2,115 @@
 
 import { AdsWrapper } from "@/components/wrappers/ad-wrapper";
 import ClientWrapper from "@/components/wrappers/client-wrapper";
+import { useAdState } from "@/states/nav-states";
 
 export const Ad1 = () => {
+  const adData = useAdState((state) => state.adCode);
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1720004780049-0"
-        label="/22725519965/N1"
-        size={[336, 280]}
+        id={adData[0].id}
+        label={adData[0].label}
+        size={adData[0].size}
       />
     </ClientWrapper>
   );
 };
 
 export const Ad2 = () => {
+  const adData = useAdState((state) => state.adCode);
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1720007795507-0"
-        label="/22725519965/N2"
-        size={[336, 280]}
+        id={adData[1].id}
+        label={adData[1].label}
+        size={adData[1].size}
       />
     </ClientWrapper>
   );
 };
 
 export const Ad3 = () => {
+  const adData = useAdState((state) => state.adCode);
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1720007839543-0"
-        label="/22725519965/N3"
-        size={[336, 280]}
+        id={adData[2].id}
+        label={adData[2].label}
+        size={adData[2].size}
       />
     </ClientWrapper>
   );
 };
 
 export const Ad4 = () => {
+  const adData = useAdState((state) => state.adCode);
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1720008017405-0"
-        label="/22725519965/N4"
-        size={[250, 250]}
+        id={adData[3].id}
+        label={adData[3].label}
+        size={adData[3].size}
       />
     </ClientWrapper>
   );
 };
 
 export const Ad5 = () => {
+  const adData = useAdState((state) => state.adCode);
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1712814513494-0"
-        label="/22725519965/107"
-        size={[336, 280]}
+        id={adData[4].id}
+        label={adData[4].label}
+        size={adData[4].size}
       />
     </ClientWrapper>
   );
 };
 
 export const Ad6 = () => {
+  const adData = useAdState((state) => state.adCode);
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1712814479863-0"
-        label="/22725519965/106"
-        size={[336, 280]}
-      />
-    </ClientWrapper>
-  );
-};
-
-export const SmallAd = () => {
-  return (
-    <ClientWrapper>
-      <AdsWrapper
-        id="div-gpt-ad-1720008268652-0"
-        label="/22725519965/A2"
-        size={[300, 75]}
-        divSize={{ x: 300, y: 75 }}
+        id={adData[5].id}
+        label={adData[5].label}
+        size={adData[5].size}
       />
     </ClientWrapper>
   );
 };
 
 export const LargeAd = () => {
+  const adData = useAdState((state) => state.adCode);
   return (
     <ClientWrapper>
       <AdsWrapper
-        id="div-gpt-ad-1712812433707-0"
-        label="/22725519965/OJS_300X600"
-        size={[300, 600]}
-        divSize={{ x: 300, y: 600 }}
+        id={adData[6].id}
+        label={adData[6].label}
+        size={adData[6].size}
+        divSize={{
+          x: parseInt(adData[6].size[0] as any),
+          y: parseInt(adData[6].size[1] as any),
+        }}
+      />
+    </ClientWrapper>
+  );
+};
+
+export const SmallAd = () => {
+  const adData = useAdState((state) => state.adCode);
+  return (
+    <ClientWrapper>
+      <AdsWrapper
+        id={adData[7].id}
+        label={adData[7].label}
+        size={adData[7].size}
+        divSize={{
+          x: parseInt(adData[7].size[0] as any),
+          y: parseInt(adData[7].size[1] as any),
+        }}
       />
     </ClientWrapper>
   );

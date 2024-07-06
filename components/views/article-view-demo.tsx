@@ -17,7 +17,7 @@ const ArticleViewDemo = ({
   useEffect(() => {
     toggle(false);
     return () => toggle(true);
-  }, []);
+  }, [toggle]);
 
   return (
     <article className="w-full flex flex-col items-start justify-start gap-y-1 prose demo">

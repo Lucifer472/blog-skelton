@@ -74,3 +74,11 @@ model Blog {
   authrId String
   Author  Profile? @relation(fields: [authrId], references: [userId])
 }
+
+model ads {
+  id          Int      @id @default(autoincrement())
+  name        String
+  label       String
+  adId        String    
+  size        Json
+}
