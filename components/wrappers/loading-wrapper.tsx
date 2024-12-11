@@ -14,17 +14,17 @@ const LoadingWrapper = () => {
       // Increment the percentage by 1 every 20 milliseconds
       setPercentage((prevPercentage) => {
         if (prevPercentage < 100) {
-          return prevPercentage + 1;
+          return prevPercentage + 10;
         } else {
           clearInterval(interval);
           return 100;
         }
       });
-    }, 15);
+    }, 20);
 
     const timeoutId = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 700);
 
     return () => {
       clearInterval(interval);

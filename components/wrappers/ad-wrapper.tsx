@@ -21,7 +21,10 @@ export const AdsWrapper = ({
   }, [pathname]);
 
   return (
-    <div className="text-center w-full space-y-1">
+    <div
+      className="text-center w-full space-y-1"
+      style={{ minHeight: "250px" }}
+    >
       <span className="text-[10px] text-center w-full">SPONSORED</span>
       <ins
         className="adsbygoogle"

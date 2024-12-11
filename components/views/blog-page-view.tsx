@@ -6,6 +6,8 @@ import { Ad1 } from "@/components/ads/ads";
 
 import { HeaderText } from "@/components/etc/header";
 import ArticleListView from "@/components/views/article-list-view";
+import { Separator } from "../ui/separator";
+import TableContent from "../etc/table-content";
 
 const BlogPostPage = ({
   blog,
@@ -44,6 +46,8 @@ const BlogPostPage = ({
             {blog.title}
           </h1>
         </div>
+        <Separator />
+        <TableContent headings={blogHeadings} />
         <ArticleView
           blogData={blog.blog as string}
           faqData={blog.faq as string}
