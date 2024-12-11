@@ -36,7 +36,7 @@ export const FeedAd = () => {
   }, [pathname]);
 
   return (
-    <div className="w-full">
+    <div className="w-full" style={{ minHeight: "280px" }}>
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}

@@ -35,7 +35,7 @@ const LoadingWrapper = () => {
   return (
     <>
       {loading && (
-        <div className="w-full h-full min-h-screen bg-blue-500 fixed flex items-center justify-center flex-col gap-y-2 z-[9999] overflow-hidden">
+        <div className="w-full h-full min-h-screen bg-[#0072aa] fixed flex items-center justify-center flex-col gap-y-2 z-[9999] overflow-hidden">
           <span className="text-white leading-[2em] text-center text-3xl">
             Loading...
           </span>

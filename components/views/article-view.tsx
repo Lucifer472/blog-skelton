@@ -35,8 +35,8 @@ const ArticleView = ({
     data: Ad4,
   };
 
-  blog.blocks.splice(2, 0, adElement1);
-  blog.blocks.splice(5, 0, adElement2);
+  blog.blocks.splice(0, 0, adElement1);
+  blog.blocks.splice(3, 0, adElement2);
   blog.blocks.splice(8, 0, adElement3);
   return (
     <div className="px-4 lg:px-0">

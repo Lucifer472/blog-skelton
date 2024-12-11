@@ -33,7 +33,7 @@ const TableContent = ({
       >
         <AccordionItem value="item-1" className="border-none">
           <AccordionTrigger className="px-0 py-2 font-semibold">
-            Content
+            Table of Content
           </AccordionTrigger>
           <AccordionContent className="flex flex-col w-full gap-y-2">
             {headings.map((h, index) => (
