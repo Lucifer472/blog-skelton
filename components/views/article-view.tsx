@@ -37,7 +37,7 @@ const ArticleView = ({
 
   blog.blocks.splice(2, 0, adElement1);
   blog.blocks.splice(5, 0, adElement2);
-  blog.blocks.splice(5, 0, adElement3);
+  blog.blocks.splice(8, 0, adElement3);
   return (
     <div className="px-4 lg:px-0">
       <article className="w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl sm:mx-auto h-full flex flex-col items-start justify-start gap-y-1  prose blog-styles">

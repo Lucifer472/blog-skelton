@@ -21,19 +21,18 @@ export const AdsWrapper = ({
   }, [pathname]);
 
   return (
-    <div
-      className="text-center w-full space-y-1"
-      style={{ minHeight: "250px" }}
-    >
+    <div className="text-center w-full space-y-1">
       <span className="text-[10px] text-center w-full">SPONSORED</span>
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-2899879927145982"
-        data-ad-slot={id}
-        data-ad-format={layout}
-        data-full-width-responsive="true"
-      ></ins>
+      <div style={{ minWidth: "336px", minHeight: "280px" }}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-2899879927145982"
+          data-ad-slot={id}
+          data-ad-format={layout}
+          data-full-width-responsive="true"
+        ></ins>
+      </div>
     </div>
   );
 };
