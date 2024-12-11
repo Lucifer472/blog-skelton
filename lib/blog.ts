@@ -21,10 +21,6 @@ export const addBlog = async (
         faq: value.faq,
         category: value.category,
         authrId: userId,
-        isIndex: value.isIndex,
-        isPending: value.isPending === "true" ? true : false,
-        connect: value.connect,
-        pageText: value.pageText === "" ? null : value.pageText,
       },
     });
 
@@ -58,10 +54,6 @@ export const updateBlogById = async (
         faq: value.faq,
         category: value.category,
         authrId: userId,
-        isIndex: value.isIndex,
-        isPending: value.isPending === "true" ? true : false,
-        connect: value.connect,
-        pageText: value.pageText === "" ? null : value.pageText,
       },
     });
 

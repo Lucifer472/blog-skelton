@@ -1,14 +1,13 @@
 import { redirect } from "next/navigation";
 import { Article, FAQPage, WithContext } from "schema-dts";
+import Script from "next/script";
 
 import { getBlogFromUrl, getBlogsByCat, getSkipBlog } from "@/lib/blog";
-import Script from "next/script";
 import { getUserById } from "@/lib/user";
+
 import { Category } from "@/constant";
 import CategoryPage from "@/components/views/category-page-view";
 import BlogPostPage from "@/components/views/blog-page-view";
-import AbPage from "@/components/views/ab-page";
-import CPage from "@/components/views/c-page";
 
 const MainQueryPage = async ({
   params,
@@ -42,19 +41,6 @@ const MainQueryPage = async ({
   const blog = await getBlogFromUrl(query);
 
   if (!blog) return redirect("/");
-
-  if (
-    blog.isPending &&
-    blog.isIndex !== "three" &&
-    blog.connect &&
-    blog.pageText
-  ) {
-    return <AbPage data={blog} link={blog.connect} title={blog.pageText} />;
-  }
-
-  if (blog.isPending && blog.isIndex === "three") {
-    return <CPage data={blog} />;
-  }
 
   const data = await getSkipBlog(blog.id);
   const { blocks } = JSON.parse(blog.blog as string);

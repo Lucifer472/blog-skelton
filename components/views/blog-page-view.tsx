@@ -1,10 +1,8 @@
 import Link from "next/link";
 
-import TableContent from "@/components/etc/table-content";
-import { Separator } from "@/components/ui/separator";
 import ArticleView from "@/components/views/article-view";
-import { Ad1, Ad2 } from "@/components/ads/ads";
 import AuthorView from "@/components/views/author-view";
+import { Ad1 } from "@/components/ads/ads";
 
 import { HeaderText } from "@/components/etc/header";
 import ArticleListView from "@/components/views/article-list-view";
@@ -46,9 +44,6 @@ const BlogPostPage = ({
             {blog.title}
           </h1>
         </div>
-        <Separator />
-        <TableContent headings={blogHeadings as any} />
-        <Ad2 />
         <ArticleView
           blogData={blog.blog as string}
           faqData={blog.faq as string}

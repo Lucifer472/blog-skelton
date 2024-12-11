@@ -5,7 +5,6 @@ import FormWrapper from "@/components/wrappers/form-wrapper";
 
 import { getBlogFromUrl } from "@/lib/blog";
 import BlogEditForm from "@/components/auth/blog-edit-form";
-import ClientWrapper from "@/components/wrappers/client-wrapper";
 
 const BlogEditPage = async ({ params }: { params: { slug: string } }) => {
   const data = await getBlogFromUrl(params.slug);
@@ -22,9 +21,7 @@ const BlogEditPage = async ({ params }: { params: { slug: string } }) => {
           title="This is Edit Form"
           label="This is form is for Editing New Blog!"
         >
-          <ClientWrapper>
-            <BlogEditForm values={data} />
-          </ClientWrapper>
+          <BlogEditForm values={data} />
         </FormWrapper>
       </div>
     </section>

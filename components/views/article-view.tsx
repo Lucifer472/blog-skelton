@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
-import { Ad4, Ad5, Ad6, LargeAd } from "../ads/ads";
+import { Ad2, Ad3, Ad4, Ad5 } from "../ads/ads";
 
 const ArticleView = ({
   blogData,
@@ -22,22 +22,22 @@ const ArticleView = ({
 
   const adElement1 = {
     type: "Ad",
-    data: LargeAd,
+    data: Ad2,
   };
 
   const adElement2 = {
     type: "Ad",
-    data: Ad5,
+    data: Ad3,
   };
 
   const adElement3 = {
     type: "Ad",
-    data: Ad6,
+    data: Ad4,
   };
 
-  blog.blocks.splice(1, 0, adElement1);
-  blog.blocks.splice(4, 0, adElement2);
-  blog.blocks.splice(7, 0, adElement3);
+  blog.blocks.splice(2, 0, adElement1);
+  blog.blocks.splice(5, 0, adElement2);
+  blog.blocks.splice(5, 0, adElement3);
   return (
     <div className="px-4 lg:px-0">
       <article className="w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl sm:mx-auto h-full flex flex-col items-start justify-start gap-y-1  prose blog-styles">
@@ -187,7 +187,7 @@ const ArticleView = ({
             }
           })
         }
-        <Ad4 />
+        <Ad5 />
         {faq && faq[0].question !== "" && (
           <Accordion
             type="single"

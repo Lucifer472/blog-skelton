@@ -62,23 +62,9 @@ model Blog {
   faq         Json?
   category    String?
 
-  isPending    Boolean     @default(false)
-  isIndex      isIndex     @default(one)
-
-  pageText    String?
-  connect     String?
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   authrId String
   Author  Profile? @relation(fields: [authrId], references: [userId])
-}
-
-model ads {
-  id          Int      @id @default(autoincrement())
-  name        String
-  label       String
-  adId        String    
-  size        Json
 }

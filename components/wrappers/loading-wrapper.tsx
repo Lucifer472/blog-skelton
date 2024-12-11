@@ -1,29 +1,15 @@
 "use client";
 
-import { getAllAdsFromServer } from "@/action/get-all-ads";
-import { useAdState } from "@/states/nav-states";
 import { useEffect, useState } from "react";
 import { PuffLoader } from "react-spinners";
 
 const LoadingWrapper = () => {
   const [loading, setLoading] = useState(true);
   const [percentage, setPercentage] = useState(0);
-  const setAds = useAdState((state) => state.setAdCode);
-
-  useEffect(() => {
-    getAllAdsFromServer().then((a) => {
-      const data = a.map((a) => ({
-        id: a.adId,
-        label: a.label,
-        size: a.size as googletag.GeneralSize,
-      }));
-
-      setAds(data);
-    });
-  }, [setAds]);
 
   useEffect(() => {
     setPercentage(0);
+    setLoading(true);
     const interval = setInterval(() => {
       // Increment the percentage by 1 every 20 milliseconds
       setPercentage((prevPercentage) => {
@@ -36,16 +22,14 @@ const LoadingWrapper = () => {
       });
     }, 15);
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
-
-  useEffect(() => {
-    setLoading(true);
     const timeoutId = setTimeout(() => {
       setLoading(false);
     }, 2000);
 
-    return () => clearTimeout(timeoutId);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   return (

@@ -1,12 +1,14 @@
-import ClientWrapper from "@/components/wrappers/client-wrapper";
+import Footer from "@/components/navigation/footer";
+import Navbar from "@/components/navigation/navbar";
 import LoadingWrapper from "@/components/wrappers/loading-wrapper";
-import Script from "next/script";
-import AnchorAd from "@/components/ads/anchor-ad";
-import InterstitialAd from "@/components/ads/interstitial-ad";
 
-const OtherLayout = ({ children }: { children: React.ReactNode }) => {
+import Script from "next/script";
+
+export const revalidate = 0;
+
+const WebLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <main>
       <LoadingWrapper />
       <Script
         strategy="beforeInteractive"
@@ -29,15 +31,11 @@ const OtherLayout = ({ children }: { children: React.ReactNode }) => {
           gtag('config', 'G-R9J2KRQV13');
         `}
       </Script>
+      <Navbar />
       {children}
-      <ClientWrapper>
-        <>
-          <AnchorAd />
-          <InterstitialAd />
-        </>
-      </ClientWrapper>
-    </>
+      <Footer />
+    </main>
   );
 };
 
-export default OtherLayout;
+export default WebLayout;

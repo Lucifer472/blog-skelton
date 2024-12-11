@@ -42,14 +42,6 @@ const AdminNavbar = () => {
           <Link href={"/admin/user"}>Add User</Link>
         </Button>
         <Separator orientation="vertical" />
-        <Button
-          variant={"link"}
-          size={"sm"}
-          className={pathname === "/admin/ads" ? "underline" : ""}
-        >
-          <Link href={"/admin/ads"}>Ads</Link>
-        </Button>
-        <Separator orientation="vertical" />
         <Button variant={"link"} onClick={handleLogout} size={"sm"}>
           Logout
         </Button>

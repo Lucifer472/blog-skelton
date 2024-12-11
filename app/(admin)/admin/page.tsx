@@ -1,6 +1,5 @@
 import BlogForm from "@/components/auth/blog-form";
 import AdminNavbar from "@/components/navigation/admin-navbar";
-import ClientWrapper from "@/components/wrappers/client-wrapper";
 import FormWrapper from "@/components/wrappers/form-wrapper";
 
 const UserPage = () => {
@@ -12,9 +11,7 @@ const UserPage = () => {
           title="Add New Blog"
           label="This is form is for adding New Blog!"
         >
-          <ClientWrapper>
-            <BlogForm />
-          </ClientWrapper>
+          <BlogForm />
         </FormWrapper>
       </div>
     </section>
