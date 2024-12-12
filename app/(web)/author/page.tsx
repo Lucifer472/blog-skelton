@@ -14,18 +14,17 @@ const AuthorPage = async () => {
         {data.map((author) => (
           <Link
             href={"/author/" + author.name}
-            className="w-full h-full py-2 flex flex-col items-start bg-slate-100 rounded-md hover:shadow"
+            className="w-full h-full py-2 flex flex-col items-start bg-[var(--pallet-2)] rounded-md hover:shadow"
             key={author.id}
           >
             <div className="w-full flex items-center justify-center flex-col gap-y-8">
               <div className="flex flex-col w-full gap-y-2 items-center justify-center">
-                <div className="rounded-full border border-slate-300 bg-white p-1">
+                <div className="rounded-full relative size-[100px] aspect-square overflow-hidden flex items-center justify-center border-4 border-slate-300 bg-white p-1">
                   <Image
                     src={author.image || "/fallback.jpg"}
                     alt="Profile Pic"
-                    width={100}
-                    height={100}
-                    className="object-contain rounded-full"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <h2 className="text-2xl font-semibold capitalize">
@@ -33,16 +32,16 @@ const AuthorPage = async () => {
                 </h2>
                 <div className="flex items-center justify-center gap-x-2">
                   <Link href={author.profile?.linkedin || "/"} target="_blank">
-                    <IoLogoLinkedin className="text-3xl text-blue-500" />
+                    <IoLogoLinkedin className="text-3xl bg-white text-blue-500" />
                   </Link>
                   <Link href={author.profile?.instagram || "/"} target="_blank">
-                    <FaInstagramSquare className="text-3xl text-pink-500" />
+                    <FaInstagramSquare className="text-3xl bg-white text-pink-500" />
                   </Link>
                   <Link href={author.profile?.twitter || "/"} target="_blank">
-                    <FaSquareXTwitter className="text-3xl" />
+                    <FaSquareXTwitter className="text-3xl bg-white" />
                   </Link>
                   <Link href={author.profile?.facebook || "/"} target="_blank">
-                    <FaSquareFacebook className="text-3xl text-blue-500" />
+                    <FaSquareFacebook className="text-3xl bg-white text-blue-500" />
                   </Link>
                 </div>
               </div>

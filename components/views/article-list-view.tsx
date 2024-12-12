@@ -6,12 +6,12 @@ import { Ad5, FeedAd } from "../ads/ads";
 const ArticleListView = ({ item, number }: { item: any; number?: number }) => {
   return (
     <>
-      <div className="w-full grid grid-cols-4 pb-4 border-b border-gray-500">
+      <div className="w-full grid grid-cols-4 pb-4 border-b border-[var(--pallet-3)]">
         <Link
           href={"/" + encodeURIComponent(item.url)}
           className="w-full col-span-4 md:col-span-3 h-full flex flex-col items-start cursor-pointer gap-y-2"
         >
-          <h2 className="text-base xs:text-lg md:text-xl font-semibold pb-2 hover:text-[#0072aa]">
+          <h2 className="text-base xs:text-lg md:text-xl font-semibold pb-2 hover:text-[var(--pallet-4)]">
             {item.title}
           </h2>
           <div className="flex items-center justify-start gap-x-2">
@@ -31,7 +31,7 @@ const ArticleListView = ({ item, number }: { item: any; number?: number }) => {
           <p className="min-h-[80px] text-xs xs:text-base">
             {item.description}
           </p>
-          <button className="flex items-center justify-center gap-x-2 px-4 py-2 xs:px-6 xs:py-4 bg-[#0072aa] rounded-md hover:bg-green-700">
+          <button className="flex items-center justify-center gap-x-2 px-4 py-2 xs:px-6 xs:py-4 bg-[var(--pallet-3)] rounded-md hover:bg-[var(--pallet-4)]">
             <span className="text-white text-sm xs:text-base">
               Continue to Read
             </span>

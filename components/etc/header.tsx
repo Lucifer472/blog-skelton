@@ -9,7 +9,7 @@ const poppins = Poppins({
 
 export const HeaderText = ({ label }: { label: string }) => {
   return (
-    <div className="flex items-center justify-between w-full pb-2 border-b border-gray-300">
+    <div className="flex items-center justify-between w-full pb-2 border-b border-[var(--pallet-3)]">
       <h2 className={cn("text-xl font-semibold", poppins.className)}>
         {label}
       </h2>

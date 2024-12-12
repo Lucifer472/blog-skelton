@@ -29,7 +29,7 @@ const TableContent = ({
       <Accordion
         type="single"
         collapsible
-        className="px-4 border border-slate-300 m-2 rounded-md"
+        className="px-4 border border-[var(--pallet-3)] m-2 rounded-md"
       >
         <AccordionItem value="item-1" className="border-none">
           <AccordionTrigger className="px-0 py-2 font-semibold">

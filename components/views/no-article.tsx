@@ -15,7 +15,7 @@ const NoArticleFound = () => {
       </h2>
       <Link
         href={"/"}
-        className="flex items-center justify-center px-12 py-2 bg-[#0072aa] rounded-md hover:bg-green-700 text-white"
+        className="flex items-center justify-center px-12 py-2 bg-[var(--pallet-3)] rounded-md hover:bg-[var(--pallet-4)] text-white"
       >
         GO BACK
       </Link>

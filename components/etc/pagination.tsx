@@ -14,12 +14,13 @@ export const Pagination = ({ isNext, isBack, page }: PaginationProps) => {
   const router = useRouter();
 
   return (
-    <div className="w-full max-w-[340px] mx-auto my-4 border-t border-b border-slate-100 py-2">
+    <div className="w-full max-w-[340px] mx-auto my-4 border-t border-b border-[var(--pallet-2)] py-2">
       <div className="flex items-center justify-center w-full gap-x-2">
         <Button
           disabled={!isBack}
           size={"sm"}
           onClick={() => router.push("?page=" + (page - 1))}
+          variant={"primary"}
         >
           <ArrowLeft className="w-4 h-4 xs:w-6 xs:h-6" />
         </Button>
@@ -33,6 +34,7 @@ export const Pagination = ({ isNext, isBack, page }: PaginationProps) => {
         </Button>
         <Button
           disabled={isNext}
+          variant={"primary"}
           size={"sm"}
           onClick={() => router.push("?page=" + (page + 1))}
         >

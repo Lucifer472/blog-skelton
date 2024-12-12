@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { PuffLoader } from "react-spinners";
+import { GoogleAdSense } from "next-google-adsense";
 
 const LoadingWrapper = () => {
   const [loading, setLoading] = useState(true);
@@ -34,8 +35,9 @@ const LoadingWrapper = () => {
 
   return (
     <>
+      <GoogleAdSense publisherId="pub-2899879927145982" /> {/* 👈 16 digits */}
       {loading && (
-        <div className="w-full h-full min-h-screen bg-[#0072aa] fixed flex items-center justify-center flex-col gap-y-2 z-[9999] overflow-hidden">
+        <div className="w-full h-full min-h-screen bg-[var(--pallet-4)] fixed flex items-center justify-center flex-col gap-y-2 z-[9999] overflow-hidden">
           <span className="text-white leading-[2em] text-center text-3xl">
             Loading...
           </span>

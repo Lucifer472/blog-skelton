@@ -4,6 +4,11 @@
 
 @layer base {
   :root {
+    --pallet-1: #f2e8c6;
+    --pallet-2: #c4bb92;
+    --pallet-3: #982b1c;
+    --pallet-4: #800000;
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -98,7 +103,7 @@
   }
 
   .blog-styles a {
-    color: blue;
+    color: var(--pallet-3);
     text-decoration: underline;
   }
 
@@ -152,11 +157,11 @@
 
   .blog-styles ul a,
   .blog-styles ol a {
-    color: darkblue;
+    color: var(--pallet-4);
   }
 
   .blog-styles mark {
-    background-color: rgb(255, 255, 190);
+    background-color: var(--pallet-3);
   }
 
   .blog-styles img {
@@ -186,19 +191,15 @@
     padding: 0.2em;
     text-align: left;
     font-weight: 700;
-    border: 1px solid black;
-    background-color: #3c3c3c;
-    color: white;
+    border: 1px solid var(--pallet-3);
+    background-color: var(--pallet-2);
+    color: black;
   }
 
   .blog-styles table td {
     padding: 0.2em;
     text-align: left;
     border: 1px solid black;
-  }
-
-  .blog-styles table tr:nth-of-type(2n) {
-    background-color: rgb(240, 240, 240);
   }
 
   /* Gradient */

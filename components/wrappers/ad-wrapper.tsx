@@ -1,6 +1,6 @@
 "use client";
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+
+import { AdUnit } from "next-google-adsense";
 
 export const AdsWrapper = ({
   id,
@@ -9,29 +9,15 @@ export const AdsWrapper = ({
   id: string;
   layout?: "auto" | "autorelaxed";
 }) => {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    try {
-      // @ts-ignore
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (error) {
-      console.log(error);
-    }
-  }, [pathname]);
-
   return (
     <div className="text-center w-full space-y-1">
       <span className="text-[10px] text-center w-full">SPONSORED</span>
       <div style={{ minWidth: "336px", minHeight: "280px" }}>
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-client="ca-pub-2899879927145982"
-          data-ad-slot={id}
-          data-ad-format={layout}
-          data-full-width-responsive="true"
-        ></ins>
+        <AdUnit
+          publisherId="pub-2899879927145982"
+          slotId={id}
+          layout={"display"}
+        />
       </div>
     </div>
   );
