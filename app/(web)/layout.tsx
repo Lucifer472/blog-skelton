@@ -6,7 +6,7 @@ export const revalidate = 0;
 
 const WebLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="bg-[var(--pallet-1)]">
+    <main className="bg-white">
       <LoadingWrapper />
       <Navbar />
       {children}

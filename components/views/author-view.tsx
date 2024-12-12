@@ -21,9 +21,7 @@ const AuthorView = ({
           className="object-contain rounded-full"
         />
         <div className="flex flex-col items-start justify-start gap-y-0">
-          <span className="text-[var(--pallet-2)] font-thin text-xs">
-            Author
-          </span>
+          <span className="text-black text-xs">Author</span>
           <Link
             href={"/author/" + encodeURIComponent(name)}
             className="text-[var(--pallet-3)] hover:text-[var(--pallet-3)] text-sm"
@@ -33,7 +31,7 @@ const AuthorView = ({
         </div>
       </div>
       <div className="flex items-start justify-start flex-col">
-        <span className="text-xs font-thin text-[var(--pallet-2)]">Date</span>
+        <span className="text-xs  text-black">Date</span>
         <time className="text-black font-semibold text-sm">{date}</time>
       </div>
     </div>
