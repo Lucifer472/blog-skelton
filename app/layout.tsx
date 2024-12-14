@@ -14,13 +14,6 @@ export const metadata: Metadata = {
   },
   description:
     "Unlock Your Career Potential: Dive into the Latest Government Job Updates! Discover Your Path to Success with our Exclusive Government Job Updates Blog. Stay Ahead of the Curve with Timely Notifications, Expert Insights, and Insider Tips. Your Gateway to Thriving in the Public Sector Starts Here",
-  twitter: {
-    card: "summary_large_image",
-    images: ["/open-graph-image.png"],
-  },
-  openGraph: {
-    images: ["/open-graph-image.png"],
-  },
 };
 
 export default function RootLayout({
