@@ -50,7 +50,9 @@ const MainQueryPage = async ({
   // const blogHeadings = blocks.filter((b: any) => b.type === "header");
   const imgMeta: string[] = blocks.map((b: any) => {
     if (b.type === "image") {
-      return b.data.file.url;
+      if (b.data.file.url) {
+        return b.data.file.url;
+      }
     }
   });
 
@@ -93,14 +95,14 @@ const MainQueryPage = async ({
       <Script
         id="Article Schema"
         type="application/ld+json"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       >
         {JSON.stringify(articleSchema)}
-      </Script>{" "}
+      </Script>
       <Script
         id="Faq Schema"
         type="application/ld+json"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       >
         {JSON.stringify(faqSchema)}
       </Script>
