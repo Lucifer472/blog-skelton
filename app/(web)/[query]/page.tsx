@@ -92,6 +92,15 @@ const MainQueryPage = async ({
 
   return (
     <>
+      <meta name="twitter:image" content={imgMeta[0]} />
+      <meta name="twitter:image:type" content="image/png" />
+      <meta name="twitter:image:width" content="1200" />
+      <meta name="twitter:image:height" content="630" />
+      <meta property="og:image" content={imgMeta[0]} />
+      <meta property="og:image:alt" content={blog.title} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <Script
         id="Article Schema"
         type="application/ld+json"
